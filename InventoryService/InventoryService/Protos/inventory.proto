@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option csharp_namespace = "InventoryService.Protos";
+
+service Inventory{
+	rpc AddNewInventoryDetails(InventoryAddModel) returns (InventoryAddResponseModel);
+	rpc GetInventoryDetailsById(InventoryGetModel) returns (InventoryGetResponseModel);
+}
+
+message InventoryAddModel{
+	string productId=1;
+	string productName=2;
+	int32 quantity=3;
+}
+
+message InventoryAddResponseModel{
+	bool response=1;
+}
+
+message InventoryGetModel{
+	string productId=1;
+}
+
+message InventoryGetResponseModel{
+	string productId=1;
+	int32 quantity=2;
+}

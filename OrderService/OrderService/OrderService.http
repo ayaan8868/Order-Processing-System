@@ -1,0 +1,17 @@
+@OrderService_HostAddress = http://localhost:5028
+
+
+###
+
+GET {{OrderService_HostAddress}}/api/product
+
+###
+
+POST {{OrderService_HostAddress}}/api/product
+Content-Type: application/json
+
+{
+  //Product
+}
+
+###
